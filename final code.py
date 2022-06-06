@@ -16,13 +16,13 @@ def send_sms_rmn(msg = None):
     global otp_sent
     OTP = create_otp()
     otp = OTP
-    client = vonage.Client(key="0bba771e", secret="TEQxUPsO0XQjmNOc")
+    client = vonage.Client(key="********", secret="****************")
     sms = vonage.Sms(client)
 
     responseData = sms.send_message(
         {
             "from": "Vonage APIs",
-            "to": "919867879221",
+            "to": "910000000000",
             "text": f"Your OTP is: {otp}",
         }
     )
